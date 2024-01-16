@@ -1,0 +1,403 @@
+:root {
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+.app {
+  padding: 50px 150px;
+  background-color: var(--Light-blue);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 90%;
+  border-radius: 10px;
+  background-color: var(--White);
+}
+.inner-container {
+  display: flex;
+  padding: 10px;
+}
+.head {
+  margin-bottom: 20px;
+}
+.head h1 {
+  color: var(--Marine-blue);
+  margin: 10px 0;
+}
+.head p {
+  color: var(--Cool-gray);
+  font-size: 16px;
+}
+.progress {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  /* justify-content: center; */
+}
+.progress .count {
+  border: 1px solid var(--Alabaster);
+  height: 40px;
+  width: 40px;
+  color: var(--Alabaster);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin-right: 20px;
+  transition: 0.2s;
+}
+.display-section {
+  position: relative;
+  height: 400px;
+  padding-bottom: 50px;
+}
+.progress .details h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Light-gray);
+}
+.progress .details h3 {
+  font-size: 16px;
+  color: var(--Alabaster);
+}
+.side-bar {
+  background: url(assets/bg-sidebar-desktop.svg) no-repeat center center/cover;
+  border-radius: 10px;
+  padding: 15px;
+  width: 350px;
+}
+.form-section {
+  width: 100%;
+  padding: 30px 80px;
+}
+.form-section .input-section {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.form-section .input-section input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 7px;
+  border: 2px solid var(--Cool-gray);
+  margin: 10px 0;
+}
+.form-section .input-section label {
+  color: var(--Marine-blue);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+.form-section .input-section label span {
+  color: var(--Strawberry-red);
+  font-size: 15px;
+  font-weight: 400;
+}
+.button-box {
+  position: absolute;
+  width: 100%;
+  text-align: end;
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  bottom: 0;
+  
+}
+.next-button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: var(--White);
+  background-color: var(--Marine-blue);
+  font-size: 16px;
+  transition: all 0.1s ease;
+}
+.next-button:hover {
+  background-color: hsl(213, 65%, 34%);
+}
+.go-back {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Cool-gray);
+  background-color: var(--White);
+  border: none;
+  transition: all 0.1s ease;
+  /* display: none; */
+}
+.go-back:hover {
+  color: var(--Marine-blue);
+}
+button:hover {
+  cursor: pointer;
+}
+.step-2 .plan-selecting {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.input-container {
+  position: relative;
+  width: 30%;
+  transition: all 0.1s ease;
+  /* height: 150px; */
+  /* border: 1px solid black; */
+}
+.input-container input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.input-container .radio-tile {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--Light-gray);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  transition: all 0.2s ease;
+}
+.inner-container .radio-tile .label-bar label{
+  font-weight: 700;
+  color: var(--Marine-blue);
+}
+.inner-container .radio-tile .radio-icon {
+  padding-bottom: 35px;
+}
+.inner-container .radio-tile .label-bar .price {
+  color: var(--Cool-gray);
+  margin: 3px 0;
+}
+.inner-container .radio-tile .label-bar .free {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--Marine-blue);
+}
+.inner-container input:checked + .radio-tile {
+  border-color: var(--Marine-blue);
+}
+.step-2 .plan-range {
+  width: 100%;
+  background-color: var(--Magnolia);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.toggle-switch {
+  display: flex;
+}
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  margin: 0 10px;
+  /* background-color: green; */
+}
+.toggle input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.toggle .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--Marine-blue);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.toggle .slider::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--Alabaster);
+  transition: all 0.2s ease;
+}
+.toggle input:checked + .slider::after {
+  transform: translateX(20px);
+}
+.toggle input:checked ~ .month {
+  font-size: 20px;
+}
+
+/* Check Box Styling  */
+.check-box  {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding: 20px;
+  margin: 8px 0;
+}
+.check-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid var(--Light-gray);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.check-box  .check-item input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--Purplish-blue);
+}
+.check-box input:checked + label {
+  border-color: var(--Marine-blue);
+}
+.check-box  .details {
+  margin-left: 10px;
+}
+.check-box  .details h2 {
+  font-size: 16px;
+  color: var(--Marine-blue);
+}
+.check-box  .details p {
+  font-size: 14px;
+  color: var(--Cool-gray);
+}
+.check-box  .amount {
+  margin-left: auto;
+  color: var(--Purplish-blue);
+}
+.toggle-switch p {
+  transition: all 0.1s ease;
+}
+
+.finishing-container {
+  margin: 10px 0;
+}
+.finishing-container .sub-section {
+  background-color: var(--Alabaster);
+  padding: 0 20px;
+}
+.finishing-container .sub-section .finishing-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--Cool-gray);
+}
+.finishing-container .sub-section .finishing-head h3 {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--Marine-blue);
+}
+.finishing-container .sub-section .finishing-head button {
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  color: var(--Cool-gray);
+}
+.finishing-container .sub-section .finishing-head .price-part p {
+  font-size: 16px;
+  color: var(--Marine-blue);
+  font-weight: 500;
+}
+.finishing-container .sub-section .purchase-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.finishing-container .sub-section .purchase-section h3 {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--Cool-gray);
+}
+.finishing-container .sub-section .purchase-section p {
+  font-size: 15px;
+  color: var(--Cool-gray);
+}
+.finishing-container .total {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.finishing-container .total h3 {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--Cool-gray);
+}
+.finishing-container .total p {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--Purplish-blue);
+}
+.confirm-button {
+  padding: 10px 22px;
+  border-radius: 10px;
+  color: var(--White);
+  border-color: var(--Purplish-blue);
+  background-color: var(--Purplish-blue);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.confirm-button:hover {
+  background-color: var(--Pastel-blue);
+  border-color: var(--Pastel-blue);
+}
+.step-5 {
+  height: 100%;
+}
+.step-5 .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.step-5 .container h1 {
+  color: var(--Marine-blue);
+  padding: 10px 0;
+}
+.step-5 .container p {
+  text-align: center;
+  color: var(--Cool-gray);
+  line-height:24px;
+}
