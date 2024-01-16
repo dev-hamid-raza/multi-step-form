@@ -401,3 +401,6 @@ button:hover {
   color: var(--Cool-gray);
   line-height:24px;
 }
+button {
+  cursor: pointer;
+}
