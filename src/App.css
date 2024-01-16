@@ -128,6 +128,7 @@ body {
   color: var(--White);
   background-color: var(--Marine-blue);
   font-size: 16px;
+  cursor: pointer;
   transition: all 0.1s ease;
 }
 .next-button:hover {
@@ -140,6 +141,7 @@ body {
   background-color: var(--White);
   border: none;
   transition: all 0.1s ease;
+  cursor: pointer;
   /* display: none; */
 }
 .go-back:hover {
@@ -400,7 +402,4 @@ button:hover {
   text-align: center;
   color: var(--Cool-gray);
   line-height:24px;
-}
-button {
-  cursor: pointer;
 }
